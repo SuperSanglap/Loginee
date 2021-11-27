@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    text-decoration: none;
+} html {
+    scroll-behavior: smooth;
+} .navbar {
+    font-family: 'Ubuntu',sans-serif;
+    padding: 10px;
+} .home {
+    background: url(../img/bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 90vh;
+    color: #fff;
+    min-height: 450px;
+    font-family: 'Ubuntu',sans-serif;
+    position: center;
+} .input-form {
+    padding-left: 150px;
+    padding-right: 150px;
+    position: center;
+} .form-text {
+    padding-top: 200px;
+    padding-bottom: 25px;
+    font-size: 90px;
+    display: block;
+    text-align: center;
+}
