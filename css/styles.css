@@ -27,4 +27,30 @@
     font-size: 90px;
     display: block;
     text-align: center;
+} .container {
+    padding: 0px;
+}
+
+/* Responsive Media Query */
+@media (max-width: 1200px){
+    .input-form {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}@media (max-width: 900px){
+    .input-form {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}@media (max-width: 500px){
+    .input-form {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+@media (max-width: 390px){
+    .input-form {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
 }
