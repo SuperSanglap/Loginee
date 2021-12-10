@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 from bs4 import BeautifulSoup
 import urllib.request, webbrowser
@@ -14,8 +14,7 @@ def my_form_post():
 	processed_text = text.upper()
 	text = text.replace(" ", "+")
 	login = scrapper(text)
-	webbrowser.open(login)
-	return render_template('index.html')
+	return redirect(login)
 
 def scrapper(query):
     url = 'https://google.com/search?q='+query
