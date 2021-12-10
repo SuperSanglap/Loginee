@@ -11,7 +11,6 @@ def index():
 @app.route('/', methods = ['POST'])
 def my_form_post():
 	text = request.form['text']
-	processed_text = text.upper()
 	text = text.replace(" ", "+")
 	login = scrapper(text)
 	return redirect(login)
@@ -34,7 +33,8 @@ def scrapper(query):
             link = results[0]
             link = link.get_text()
             break
-    link = link + '/login'
+    link = link.replace(" ", "")
+    link = link.replace("›", "/")
     return link
 
 if __name__ == '__main__':
