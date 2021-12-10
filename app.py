@@ -1,14 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 from bs4 import BeautifulSoup
 import urllib.request, webbrowser
 
 
-@app.route('/',methods=("GET", "POST"), strict_slashes=False)
+@app.route('/')
 def index():
-	login = scrapper('facebook')
-	webbrowser.open(login)
 	return render_template("index.html")
+
+@app.route('/', methods = ['POST'])
+def my_form_post():
+	text = request.form['text']
+	processed_text = text.upper()
+	text = text.replace(" ", "+")
+	login = scrapper(text)
+	webbrowser.open(login)
+	return render_template('index.html')
 
 def scrapper(query):
     url = 'https://google.com/search?q='+query
