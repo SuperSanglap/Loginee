@@ -11,12 +11,13 @@ def index():
 @app.route('/', methods = ['POST'])
 def my_form_post():
 	text = request.form['text']
+	text = text.replace("login", " ")
 	text = text.replace(" ", "+")
 	login = scrapper(text)
 	return redirect(login)
 
 def scrapper(query):
-    url = 'https://google.com/search?q='+query
+    url = f'https://google.com/search?q={query}+login'
 
     request = urllib.request.Request(url)
     request.add_header('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36')
