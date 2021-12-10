@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 from bs4 import BeautifulSoup
-import urllib.request, webbrowser
+import urllib.request
 
 
 @app.route('/')
