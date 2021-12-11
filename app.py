@@ -29,7 +29,6 @@ def scrapper(query):
     divs = soup.select("#search div.g")
     for div in divs:
         results = div.select("cite")
-
         if (len(results) >= 1):
             link = results[0]
             link = link.get_text()
