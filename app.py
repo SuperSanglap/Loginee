@@ -3,7 +3,6 @@ app = Flask(__name__)
 from bs4 import BeautifulSoup
 import urllib.request
 
-
 @app.route('/')
 def index():
 	return render_template("index.html")
