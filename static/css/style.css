@@ -1,0 +1,96 @@
+.body {
+    margin: 25px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)),
+      url(..//IMG/bg.jpg) no-repeat center;
+} .body .navbar {
+    border-radius: 15px;
+} .body .navbar .navbar-nav .nav-link {
+    font-size: 19px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 550;
+    transition: 0.3s ease-in-out;
+} .body .navbar .navbar-nav .nav-link:hover {
+    color: yellow;
+} 
+
+/* Home Section Styling */
+.home{
+    height: 42vh;
+} .home h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    padding: 5px;
+    margin-top: 220px;
+    margin-bottom: 50px;
+} .home .input-group {
+    padding-left: 150px;
+    padding-right: 150px;
+} .home .input-group .form-control {
+    margin-right: 15px;
+    border-radius: 50px;
+    border: 2px solid white;
+} .home .input-group .form-control:active {
+    border: 2px solid red;
+} .home .input-group .btn-dark {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 550;
+    min-width: 130px;
+    border-radius: 50px;
+} .home .input-group .btn-dark:hover {
+    border: solid 2px white;
+}
+
+footer {
+    margin-top: 120px;
+    font-family: 'Courier New', Courier, monospace;
+    position: center;
+    font-weight: 600;
+    font-size: 17px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    width: 100%;
+}.credit {
+    color: red;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}.credit:hover {
+    color: yellow;
+    font-size: 19px;
+}.fa-heart {
+    color: red;
+    transition: 0.3s ease-in-out;
+}.fa-heart:hover {
+    color: yellow;
+    font-size: 20px;
+}
+
+@media (max-width: 1200px){
+    .body .input-group {
+        padding-left: 95px;
+        padding-right: 95px;
+    }.body .input-group .btn-dark {
+        min-width: 100px;
+    }
+}
+@media (max-width: 1000px){
+    .body .input-group {
+        padding-left: 55px;
+        padding-right: 55px;
+    }.body .input-group .btn-dark {
+        min-width: 80px;
+    }
+}
+@media (max-width: 600px){
+    .body .input-group {
+        padding-left: 5px;
+        padding-right: 5px;
+    }.body .input-group .btn-dark {
+        min-width: 60px;
+    }
+}
